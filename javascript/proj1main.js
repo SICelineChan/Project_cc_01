@@ -41,8 +41,8 @@ function fillPlaces(travelInfo) {
   for (let i = 0; i < baseInfo.length; i++) {
     let output = listInfo(baseInfo[i]);
     console.log(baseInfo[i]);
-
-    placeName.innerHTML += output;
+    console.log(output);
+    // placeName.innerHTML += output;
   }
 }
 fillPlaces();
