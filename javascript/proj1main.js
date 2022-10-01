@@ -31,6 +31,13 @@ let baseInfo = [
   },
 ];
 const placeName = document.querySelector("#placeName");
+const continentAdd = document.querySelector("#continentAdd");
+const countryAdd = document.querySelector("#countryAdd");
+const cityAdd = document.querySelector("#cityAdd");
+const dateOftravelAdd = document.querySelector('input[type="date"]');
+const buttonAdd = document.querySelector("#buttonAdd");
+
+console.log(dateOftravelAdd);
 
 function listInfo(info) {
   let outcome = `<p> ${info.continent} in ${info.country}! The city is ${info.city}, ${info.dateOftravel}! `;
@@ -42,7 +49,21 @@ function fillPlaces(travelInfo) {
     let output = listInfo(baseInfo[i]);
     console.log(baseInfo[i]);
     console.log(output);
-    // placeName.innerHTML += output;
+    placeName.innerHTML += output;
   }
 }
 fillPlaces();
+
+buttonAdd.addEventListener("click", function () {
+  // console.log(dateOftravelAdd);
+  // console.log(dateOftravelAdd.value);
+  // console.log(countryAdd);
+  const newTravelInfo = {
+    continent: continentAdd.value,
+    country: countryAdd.value,
+    city: cityAdd.value,
+    dateOftravel: dateOftravelAdd.value,
+  };
+  baseInfo.push(newTravelInfo);
+  fillPlaces();
+});
