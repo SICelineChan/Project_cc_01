@@ -37,20 +37,22 @@ const cityAdd = document.querySelector("#cityAdd");
 const dateOftravelAdd = document.querySelector('input[type="date"]');
 const buttonAdd = document.querySelector("#buttonAdd");
 
-console.log(dateOftravelAdd);
-
 function listInfo(info) {
   let outcome = `<p> ${info.continent} in ${info.country}! The city is ${info.city}, ${info.dateOftravel}! `;
   return outcome;
 }
 
 function fillPlaces(travelInfo) {
+  let places = "";
   for (let i = 0; i < baseInfo.length; i++) {
-    let output = listInfo(baseInfo[i]);
-    console.log(baseInfo[i]);
-    console.log(output);
-    placeName.innerHTML += output;
+    const { continent, country, city, dateOftravel } = baseInfo[i];
+    places += `<p> ${continent}, ${country}, ${city}, ${dateOftravel} <button data-pos="${i}">🚮</button></p>`;
+    // let output = listInfo(baseInfo[i]);
+    // console.log(baseInfo[i]);
+    // console.log(output);
+    // placeName.innerHTML += output;
   }
+  placeName.innerHTML = places;
 }
 fillPlaces();
 
@@ -65,5 +67,19 @@ buttonAdd.addEventListener("click", function () {
     dateOftravel: dateOftravelAdd.value,
   };
   baseInfo.push(newTravelInfo);
+  fillPlaces();
+});
+
+placeName.addEventListener("click", function (event) {
+  // alert("show me click");
+  // console.log(event.target.tagName);
+  if (event.target.tagName !== "BUTTON") {
+    return;
+  }
+  const binButton = event.target;
+  // console.log(binButton);
+  const binPlace = binButton.dataset.pos;
+  // console.log(binPlace);
+  baseInfo.splice(binPlace, 1);
   fillPlaces();
 });
