@@ -6,11 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
   </head>
-  <!-- <link rel="stylesheet" href="#" /> -->
+  <script
+    src="https://kit.fontawesome.com/86c485152f.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/CSS/styleMe.css" />
+  <link rel="icon" href="/Images/palmfavicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  />
   <body>
-    <div id="mainContainer"></div>
-    <h1>Hi, I'm Celine!</h1>
-    <h3>Welcome to my travel blog</h3>
+    <section class="hero is-warning is-fullheight">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                <i class="fa-solid fa-shrimp fa-xl"></i>
+                <!-- <img src="#" alt="Logo" /> -->
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item is-active"> Home </a>
+                <a class="navbar-item"> Dear Diary </a>
+                <a class="navbar-item"> Facts & Places </a>
+                <a class="navbar-item"> Fun & Games </a>
+                <span class="navbar-item">
+                  <a class="button is-warning is-inverted">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-left-desktop-only">
+          <p class="title"><span class="Moin">Moin</span> , I'm Celine!</p>
+          <p class="subtitle">Welcome to my log of travels</p>
+          <figure class="image is-128x128">
+            <img class="is-rounded has-" src="/Images/dog.png" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <br />
     <div id="middleContainer"></div>
     <h2>Dear Diary</h2>
@@ -34,16 +94,16 @@
       max="2050-12-31"
       placeholder="dateOftravel"
     />
-    <button id="buttonAdd">Add</button>
+    <!-- <button id="buttonAdd">Add</button> -->
+    <button id="buttonAdd" class="button is-danger is-light is-small">
+      Add!
+    </button>
     <hr />
-    <h2>Have you forgotten?</h2>
-    <p>
-      Use MathRandom to randomise some dates, where were you on...MathRandom,
-      October 2019?! Probably at work or at home!
-    </p>
-    <p>Play with the weather function</p>
+
     <h2>Fun Fact & Fun Game!</h2>
     <p>play a game of magic 8 ball (Math.random and Math.floor)</p>
+    Use MathRandom to randomise some dates, where were you on...MathRandom,
+    October 2019?! Probably at work or at home!
     <br />
     <hr />
     <div id="capital">Testing Countries Rest API</div>

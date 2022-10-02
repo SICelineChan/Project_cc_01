@@ -1,0 +1,13 @@
+/* fonts
+font-family: 'Jua', sans-serif;
+font-family: 'Mada', sans-serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Shrikhand', cursive; */
+.Moin {
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+}
+body {
+  font-family: "Jua", sans-serif;
+  font-size: 15px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dear Diary</title>
+  </head>
+  <script
+    src="https://kit.fontawesome.com/86c485152f.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="/CSS/styleMe.css" />
+  <link rel="icon" href="/Images/palmfavicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
+    rel="stylesheet"
+  />
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  /> -->
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item"> Home </a>
+            <a class="navbar-item"> Facts & Places </a>
+            <a class="navbar-item"> Fun & Games </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-dark">Github</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero is-warning is-small">
+      <div class="hero-body">
+        <p class="title">Dear Diary</p>
+      </div>
+    </section>
+    <p>
+      A bit of about me kind of page. When I started travelling, where I like
+      the most, where I hate the most! Have "hate" places with some pics and
+      links.
+    </p>
+    <hr />
+    <h2>Current City</h2>
+    <p>Hamburg, Germany</p>
+    <h2>Feature City</h2>
+    <p><div id="forecastForCity"></div></p>
+    <div id="weatherPic"></div>
+    <p>A kinda short and sweet page to practice some HTML</p>
+    <h2>Places</h2>
+    <p>Place to play around with event.target, removing places/countries...</p>
+    <div id="placeName">First try of sorting some travel info on JS!</div>
+    <input id="continentAdd" type="text" value="" placeholder="continent" />
+    <input id="countryAdd" type="text" value="" placeholder="country" />
+    <input id="cityAdd" type="text" value="" placeholder="city" />
+    <input
+      id="dateOftravelAdd"
+      type="date"
+      value="2022-01-10"
+      min="2000-01-01"
+      max="2050-12-31"
+      placeholder="dateOftravel"
+    />
+    <!-- <button id="buttonAdd">Add</button> -->
+    <button id="buttonAdd" class="button is-danger is-light is-small">
+      Add!
+    </button>
+
+    <script src="/javascript/proj1main.js"></script>
+    
+    <!-- <script src="/javascript/fetchMeLisbon.js"></script> -->
+    <!-- <script src="/javascript/weatherTEST.js"></script> -->
+  </body>
+</html>

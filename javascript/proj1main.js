@@ -42,19 +42,25 @@ function listInfo(info) {
   return outcome;
 }
 
-function fillPlaces(travelInfo) {
+function fillPlaces() {
   let places = "";
   for (let i = 0; i < baseInfo.length; i++) {
     const { continent, country, city, dateOftravel } = baseInfo[i];
     places += `<p> ${continent}, ${country}, ${city}, ${dateOftravel} <button data-pos="${i}">🚮</button></p>`;
-    // let output = listInfo(baseInfo[i]);
-    // console.log(baseInfo[i]);
-    // console.log(output);
-    // placeName.innerHTML += output;
   }
   placeName.innerHTML = places;
 }
-fillPlaces();
+
+function save() {
+  const stringBaseInfo = JSON.stringify(baseInfo);
+  localStorage.setItem("baseInfo", stringBaseInfo);
+}
+save();
+
+function loadinfo() {
+  const stringBaseInfo = localStorage.getItem("baseInfo");
+  baseInfo = JSON.parse(stringBaseInfo);
+}
 
 buttonAdd.addEventListener("click", function () {
   // console.log(dateOftravelAdd);
@@ -68,6 +74,7 @@ buttonAdd.addEventListener("click", function () {
   };
   baseInfo.push(newTravelInfo);
   fillPlaces();
+  save();
 });
 
 placeName.addEventListener("click", function (event) {
@@ -82,4 +89,7 @@ placeName.addEventListener("click", function (event) {
   // console.log(binPlace);
   baseInfo.splice(binPlace, 1);
   fillPlaces();
+  save();
 });
+fillPlaces();
+loadinfo();
