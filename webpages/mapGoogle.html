@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <script
+  src="https://kit.fontawesome.com/86c485152f.js"
+  crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="/CSS/styleMe.css" />
+<link rel="icon" href="/Images/palmfavicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+/>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+        <link rel="stylesheet" type="text/css" href="/CSS/styleMe.css" />
+        <script type="module" src="./index.js"></script>
+      
+    
+      <body> 
+        <nav class="navbar">
+        <div class="container">
+          <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="/webpages/index.html"><span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-home"></i>
+                </span>
+                <span>Home</span>
+              </span>
+               </a>
+              
+            </div>
+  
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <a class="navbar-item" href="/webpages/dearDiary.html"> Dear Diary </a>
+              <a class="navbar-item" href="/webpages/localStorage.html"> Facts & Places </a>
+              <a class="navbar-item" href="/webpages/mapGoogle.html"> Fun Map </a>
+                <div class="buttons">
+                  <a class="button is-dark" href="https://github.com/SICelineChan">Github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="hero is-medium is-warning has-text-centered-desktop">
+        <div class="hero-body">
+          <p class="title">
+            Fun Map
+          </p>
+          <p class="subtitel">Check out the map!</p>
+        </div>
+      </section>
+      <br>
+
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column is-half"> 
+            <div id="forecastForCity"></div>
+            <div id="weather">Testing JS with OpenWeather API</div>
+          </div>
+
+          <div class="column">
+            <p>Here is scaled down map from Google of Funchal!</p>
+
+            <p>You can scroll and check out other places on Madeira Island!</p>
+            <div id="map"></div>
+          </div>
+          
+        </div>
+        
+      
+
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc8lLUI39Rw8xGjcH4AMua2x3-SVWMBig&callback=initMap&v=weekly"
+          defer
+        ></script>
+        <script src="/javascript/mapTest.js"></script>
+        <script src="/javascript/weatherTEST.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

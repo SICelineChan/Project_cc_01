@@ -1,0 +1,30 @@
+body {
+  background-color: white;
+  height: 80vh;
+  transition: all 0.4s ease;
+}
+
+body .title {
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: lightgrey;
+}
+
+body.dark .container,
+body.dark .title {
+  color: darkblue;
+}
+body.dark button {
+  color: aliceblue;
+  background: darkgoldenrod;
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+  color: lightgrey;
+  background: grey;
+}

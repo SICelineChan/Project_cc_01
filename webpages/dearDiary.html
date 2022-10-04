@@ -18,48 +18,125 @@
     href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
     rel="stylesheet"
   />
-  <!-- <link
+  <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-  /> -->
+  />
   <body>
     <nav class="navbar">
       <div class="container">
         <div id="navMenu" class="navbar-menu">
           <div class="navbar-start">
-            <a class="navbar-item"> Home </a>
-            <a class="navbar-item"> Facts & Places </a>
-            <a class="navbar-item"> Fun & Games </a>
+            <a class="navbar-item" href="/webpages/index.html"> 
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fas fa-home"></i>
+                </span>
+                <span>Home</span>
+              </span>
+            </a>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
+              <a class="navbar-item" href="/webpages/dearDiary.html"> Dear Diary </a>
+              <a class="navbar-item" href="/webpages/localStorage.html"> Facts & Places </a>
+              <a class="navbar-item" href="/webpages/mapGoogle.html"> Fun Map </a>
               <div class="buttons">
-                <a class="button is-dark">Github</a>
+                <a class="button is-dark" href="https://github.com/SICelineChan">Github</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </nav>
-
-    <section class="hero is-warning is-small">
+    <section class="hero is-medium is-warning has-text-centered-desktop">
       <div class="hero-body">
-        <p class="title">Dear Diary</p>
+        <p class="title">
+          Dear Diary
+        </p>
+        <p class="subtitel">A place for memories!</p>
       </div>
     </section>
-    <p>
-      A bit of about me kind of page. When I started travelling, where I like
-      the most, where I hate the most! Have "hate" places with some pics and
-      links.
-    </p>
-    <hr />
-    <h2>Current City</h2>
-    <p>Hamburg, Germany</p>
+    <!-- separation -->
+    <br>
+    <!-- more separation -->
+    <div class="container is-fluid">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <div class="tile is-child notification is-light">
+                <p class="subtitle">Travel Logs!</p>
+                <p>
+                  A bit of about me kind of page. When I started travelling, where I like
+                  the most, where I hate the most!
+                </p>
+              </div>
+              <div class="tile is-child notification is-warning">
+                <div id="placeName">First try of sorting some travel info on JS!</div>
+    <input id="continentAdd" type="text" value="" placeholder="continent" />
+    <input id="countryAdd" type="text" value="" placeholder="country" />
+    <input id="cityAdd" type="text" value="" placeholder="city" />
+    <input
+      id="dateOftravelAdd"
+      type="date"
+      value="2022-01-10"
+      min="2000-01-01"
+      max="2050-12-31"
+      placeholder="dateOftravel"
+    />
+    <button id="buttonAdd" class="button is-danger is-light is-small">
+      Add!
+    </button>
+    </div>
+              
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-light">
+                
+                <p class="subtitle">Ireland</p>
+                <figure class="image is-4by3">
+                  <img src="/Images/Ire30Aug16_mod.jpg">
+                </figure>
+              </article>
+            </div>
+          </div>
+          <!-- <div class="tile is-parent">
+            <article class="tile is-child notification is-danger">
+              <p class="title">Weather forecast!</p>
+              <p class="subtitle">Aligned with the right tile</p>
+              <div class="content">
+                
+              </div>
+            </article>
+          </div> -->
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-warning has-text-centered">
+            <div class="content">
+              
+              <p class="subtitle">Weather</p>
+              <div class="#">
+                <h2>Current City</h2>
+    <p><div id="currentCity"></div></p>
+    <img id="wetterIcon" src="">
+    <br>
     <h2>Feature City</h2>
     <p><div id="forecastForCity"></div></p>
-    <div id="weatherPic"></div>
-    <p>A kinda short and sweet page to practice some HTML</p>
+    <div id="featureForCity"></div>
+    <img id="weatherIcon" src="">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+  
+    
+    <hr />
+    
+    
+    <p>Test Current weather and the icon</p>
     <h2>Places</h2>
     <p>Place to play around with event.target, removing places/countries...</p>
     <div id="placeName">First try of sorting some travel info on JS!</div>
@@ -74,14 +151,15 @@
       max="2050-12-31"
       placeholder="dateOftravel"
     />
-    <!-- <button id="buttonAdd">Add</button> -->
+    <!-- <button id="buttonPush">Push</button> -->
     <button id="buttonAdd" class="button is-danger is-light is-small">
       Add!
     </button>
+  </div>
 
     <script src="/javascript/proj1main.js"></script>
-    
+
     <!-- <script src="/javascript/fetchMeLisbon.js"></script> -->
-    <!-- <script src="/javascript/weatherTEST.js"></script> -->
+    <script src="/javascript/featureCity.js"></script>
   </body>
 </html>

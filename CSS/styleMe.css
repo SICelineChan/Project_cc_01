@@ -7,7 +7,25 @@ font-family: 'Shrikhand', cursive; */
   font-family: "Shrikhand", cursive;
   font-size: 50px;
 }
+.title {
+  font-size: 45px;
+  font-family: "Shrikhand", cursive;
+}
+.subtitle {
+  font-size: 40px;
+  font-family: "Nanum Pen Script", cursive;
+}
 body {
-  font-family: "Jua", sans-serif;
-  font-size: 15px;
+  font-family: "Mada", sans-serif;
+}
+#mexPic {
+  width: 450px;
+  height: 330px;
+  transform: rotate(10deg);
+}
+#map {
+  border: dotted 10px solid black;
+  width: 250px;
+  height: 250px;
+  background-color: aliceblue;
 }
