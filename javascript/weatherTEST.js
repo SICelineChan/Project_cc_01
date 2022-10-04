@@ -4,7 +4,7 @@ function cityForecast(somePlace) {
     console.log(somePlace[i].weather[0].description);
     console.log(somePlace[i].dt_txt);
     const wetterForecast = " : " + somePlace[i].weather[0].description;
-    weather.innerHTML += `<p> the weather forecast to be ${wetterForecast}.
+    weather.innerHTML += `<p> the weather forecast ${wetterForecast}.
     Then at these times : ${somePlace[i].dt_txt}  </p>`;
   }
 }

@@ -8,6 +8,7 @@ font-family: 'Shrikhand', cursive; */
   font-size: 50px;
 }
 .title {
+  color: solid black;
   font-size: 45px;
   font-family: "Shrikhand", cursive;
 }
@@ -25,7 +26,7 @@ body {
 }
 #map {
   border: dotted 10px solid black;
-  width: 250px;
-  height: 250px;
+  width: 600px;
+  height: 240px;
   background-color: aliceblue;
 }

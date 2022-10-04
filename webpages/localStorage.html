@@ -11,6 +11,7 @@
     crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" href="/CSS/styleMe.css" />
+  <link rel="stylesheet" href="/CSS/darkmodeTest.css" />
   <link rel="icon" href="/Images/palmfavicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,37 +73,35 @@
           </p>
         </div>
       </div>
-
-      <!-- <figure class="image">
-          <img class="is-square" src="/Images/Ire30Aug16_mod.jpg" />
-        </figure> -->
     </section>
-    <section class="section is-small">
+    <br />
+    <div class="container has-text-centered">
       <h1 class="title">Countries!</h1>
-      <p>
-        A simple space to write some blah so it's easy to read.
-      </p>
-    </section>
+      <p>A simple space to write some blah so it's easy to read.</p>
+      <button
+        id="darkModeButton"
+        class="button is-small is-hovered has-text-centered-desktop"
+      >
+        Dark Mode On
+      </button>
+    </div>
     <div class="container is-fluid">
-      
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-light is-6">
-            <h1 class="title">Mexico</h1>
-            
-            <div class="content">
-              <p id="capital"></p>
-            </div>
-          </article>
-        </div>
-      
-        
-        
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-light is-6">
+          <h1 class="title">Mexico</h1>
+
+          <div class="content">
+            <p id="capital"></p>
+          </div>
+        </article>
       </div>
     </div>
+
     <!-- <script>
       // localStorage.setItem("myPlace", "London");
       // alert(localStorage.getItem("myPlace"));
     </script> -->
     <script src="/javascript/fetchMeMexico.js"></script>
+    <script src="/javascript/darkMode.js"></script>
   </body>
 </html>

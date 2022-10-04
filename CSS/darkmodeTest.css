@@ -8,14 +8,17 @@ body .title {
   color: black;
 }
 
-body.dark {
+body.dark,
+body.dark .container,
+body.dark .tile {
   background-color: black;
   color: lightgrey;
 }
 
 body.dark .container,
-body.dark .title {
-  color: darkblue;
+body.dark .title,
+body.dark .tile {
+  color: darkgoldenrod;
 }
 body.dark button {
   color: aliceblue;
