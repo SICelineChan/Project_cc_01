@@ -6,17 +6,9 @@ darkModeButton.addEventListener("click", function () {
 
   if (darkCheck) {
     body.className = "";
+    darkModeButton.innerHTML = `Dark Mode on.`;
   } else {
     body.className = "dark";
+    darkModeButton.innerHTML = `Dark Mode Off!`;
   }
 });
-
-// darkModeButton.addEventListener("click", () => {
-//   let bodyCheck = body.classList.contains("dark");
-
-//   if (bodyCheck) {
-//     body.className = "";
-//   } else {
-//     body.className = "dark";
-//   }
-// });

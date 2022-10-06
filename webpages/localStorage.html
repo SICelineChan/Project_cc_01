@@ -75,7 +75,7 @@
       </div>
     </section>
     <br />
-    <div class="container has-text-centered">
+    <div class="container has-text-centered++">
       <h1 class="title">Countries!</h1>
       <p>A simple space to write some blah so it's easy to read.</p>
       <button
@@ -85,15 +85,30 @@
         Dark Mode On
       </button>
     </div>
-    <div class="container is-fluid">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-light is-6">
-          <h1 class="title">Mexico</h1>
+    <br />
 
-          <div class="content">
-            <p id="capital"></p>
-          </div>
-        </article>
+    <div class="container is-fluid">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child box notification is-warning">
+            <h1 class="title">Mexico</h1>
+            <div class="content">
+              <p id="capital"></p>
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent is-8">
+          <article class="tile is-child box notification is-light">
+            <h1 class="title">Random Pics</h1>
+            <div class="content">
+              <!-- RandomPic -->
+              <div id="randomPicture"></div>
+              <button id="turnButton" class="button is-rounded is-warning">
+                turn
+              </button>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
 
@@ -103,5 +118,6 @@
     </script> -->
     <script src="/javascript/fetchMeMexico.js"></script>
     <script src="/javascript/darkMode.js"></script>
+    <script src="/javascript/randomPractice.js"></script>
   </body>
 </html>
