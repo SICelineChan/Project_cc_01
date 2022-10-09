@@ -15,49 +15,60 @@
   <link rel="icon" href="/Images/palmfavicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Norican&family=Patua+One&family=Shrikhand&display=swap"
     rel="stylesheet"
   />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
   />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <script type="module" src="./index.js"></script>
   <body>
     <nav class="navbar">
       <div class="container">
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="/webpages/index.html">
-              <span class="icon-text">
-                <span class="icon">
-                  <i class="fas fa-home"></i>
-                </span>
-                <span>Home</span>
+        <span class="navbar-burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+
+      <div id="navMenuHeroA" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/webpages/index.html">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-home"></i>
               </span>
+              <span>Home</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="navbar-item" href="/webpages/dearDiary.html">
+              Dear Diary
             </a>
-          </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <a class="navbar-item" href="/webpages/dearDiary.html">
-                Dear Diary
-              </a>
-              <a class="navbar-item" href="/webpages/localStorage.html">
-                Facts & Places
-              </a>
-              <a class="navbar-item" href="/webpages/mapGoogle.html">
-                Fun Map
-              </a>
-              <div class="buttons">
-                <a class="button is-dark" href="https://github.com/SICelineChan"
-                  >Github</a
-                >
-              </div>
+            <a class="navbar-item" href="/webpages/localStorage.html">
+              Facts & Places
+            </a>
+            <a class="navbar-item" href="/webpages/mapGoogle.html"> Fun Map </a>
+            <div class="buttons">
+              <a class="button is-dark" href="https://github.com/SICelineChan"
+                >Github</a
+              >
             </div>
           </div>
         </div>
       </div>
     </nav>
+
     <section class="hero is-medium is-warning">
       <div class="columns is-vcentered">
         <div class="column is-6-desktop has-text-centered">
@@ -70,21 +81,25 @@
             <figure class="image">
               <img id="mexPic" src="/Images/Mexico28Feb17_mod.jpg" />
             </figure>
+            <figure class="image">
+              <img id="portPic" src="/Images/Ismal.jpg" />
+            </figure>
           </p>
         </div>
       </div>
     </section>
     <br />
-    <div class="container has-text-centered++">
+    <div class="container is-0 has-text-centered">
       <h1 class="title">Countries!</h1>
       <p>A simple space to write some blah so it's easy to read.</p>
       <button
         id="darkModeButton"
-        class="button is-small is-hovered has-text-centered-desktop"
+        class="button is-small is-hovered is-rounded is-left"
       >
         Dark Mode On
       </button>
     </div>
+
     <br />
 
     <div class="container is-fluid">
@@ -92,32 +107,50 @@
         <div class="tile is-parent">
           <article class="tile is-child box notification is-warning">
             <h1 class="title">Mexico</h1>
+            <button
+              id="textButton"
+              class="button is-small is-rounded is-right is-light"
+            >
+              <span class="icon">
+                <i class="fas fa-heading fa-lg"></i>
+              </span>
+            </button>
             <div class="content">
               <p id="capital"></p>
             </div>
           </article>
         </div>
         <div class="tile is-parent is-8">
-          <article class="tile is-child box notification is-light">
-            <h1 class="title">Random Pics</h1>
+          <article
+            class="tile is-child box notification is-dark has-text-centered"
+          >
+            <h1 class="title">Flag and Map of Country</h1>
             <div class="content">
-              <!-- RandomPic -->
-              <div id="randomPicture"></div>
-              <button id="turnButton" class="button is-rounded is-warning">
-                turn
-              </button>
+              <img id="flagOfMex" src="" alt="Flag of Mexico" />
+              <div id="mapOfMexico"></div>
             </div>
           </article>
         </div>
       </div>
     </div>
 
-    <!-- <script>
-      // localStorage.setItem("myPlace", "London");
+    <script>
+      localStorage.setItem("myPlace", "London");
       // alert(localStorage.getItem("myPlace"));
-    </script> -->
+      // localStorage.setItem("darkmode", "off")
+      // alert(localStorage.getItem("darkmode"));
+
+      let current = localStorage.getItem("myPlace");
+      let placeData = current ? current + " and Hamburg" : "Hamburg";
+
+      localStorage.setItem("myPlace", placeData);
+    </script>
+
     <script src="/javascript/fetchMeMexico.js"></script>
     <script src="/javascript/darkMode.js"></script>
-    <script src="/javascript/randomPractice.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc8lLUI39Rw8xGjcH4AMua2x3-SVWMBig&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>

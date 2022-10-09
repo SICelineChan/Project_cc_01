@@ -1,15 +1,20 @@
-/* fonts
-font-family: 'Jua', sans-serif;
+/* font-family: 'Jua', sans-serif;
 font-family: 'Mada', sans-serif;
 font-family: 'Nanum Pen Script', cursive;
+font-family: 'Norican', cursive;
+font-family: 'Patua One', cursive;
 font-family: 'Shrikhand', cursive; */
 .Moin {
   font-family: "Shrikhand", cursive;
-  font-size: 50px;
+  font-size: 40px;
+}
+.meName {
+  font-family: "Jua", sans-serif;
 }
 .title {
   color: solid black;
   font-size: 45px;
+
   font-family: "Shrikhand", cursive;
 }
 .subtitle {
@@ -17,16 +22,62 @@ font-family: 'Shrikhand', cursive; */
   font-family: "Nanum Pen Script", cursive;
 }
 body {
+  font-size: 18px;
   font-family: "Mada", sans-serif;
 }
+/* Fun places with some photos */
 #mexPic {
   width: 450px;
   height: 330px;
   transform: rotate(10deg);
+  clear: left;
 }
+#portPic {
+  width: 450px;
+  height: 330px;
+  transform: rotate(-10deg);
+  float: right;
+}
+/* testing googleMap first try Funchal, Madeira */
 #map {
   border: dotted 10px solid black;
   width: 600px;
   height: 240px;
   background-color: aliceblue;
+}
+/* Carousel of photos*/
+#randomPicture {
+  border: 2px solid black;
+  width: 300px;
+  height: 280px;
+  position: absolute;
+  left: 350px;
+  background-image: url(/Images/Norway18Arp15.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+}
+/* Map of MexicoCity */
+#mapOfMexico {
+  border: 1px solid black;
+  width: 400px;
+  height: 200px;
+  background-color: aliceblue;
+  float: right;
+}
+/* Magic Eight Ball Cat */
+#eightBall {
+  width: 25%;
+  display: flex;
+}
+
+.speech-bubble {
+  position: absolute;
+  left: 400px;
+  top: 45%;
+  width: 160px;
+  height: 60px;
+  background-color: darkcyan;
+  z-index: 1;
 }

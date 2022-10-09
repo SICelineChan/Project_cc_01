@@ -11,13 +11,13 @@
     crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" href="/CSS/styleMe.css" />
+  <link rel="stylesheet" href="/CSS/animation.css">
   <link rel="icon" href="/Images/palmfavicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Norican&family=Patua+One&family=Shrikhand&display=swap" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -32,11 +32,11 @@
                 <i class="fa-solid fa-shrimp fa-xl"></i>
                 <!-- <img src="#" alt="Logo" /> -->
               </a>
-              <!-- <span class="navbar-burger" data-target="navbarMenuHeroA">
+              <span class="navbar-burger" data-target="navbarMenuHeroA">
                 <span></span>
                 <span></span>
                 <span></span>
-              </span> -->
+              </span>
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
@@ -56,6 +56,9 @@
                 <a class="navbar-item" href="/webpages/mapGoogle.html">
                   Fun Map
                 </a>
+                <a class="navbar-item" href="/webpages/eightBallCat.html">
+                  Magic Eight Ball
+                </a>
                 <span class="navbar-item">
                   <a class="button is-warning is-inverted" href="https://github.com/SICelineChan">
                     <span class="icon">
@@ -74,60 +77,97 @@
       <div class="hero-body">
         <div class="container has-text-left-desktop-only">
           <!-- column 1 -->
-          <div class="columns is-vcentered">
-            <div class="column is-6-desktop has-text-centered">
-          <p class="title"><span class="Moin">Moin</span> , I'm Celine!</p>
-          <p class="subtitle">Welcome to my log of travels & the animals I've encountered! </p>
+          
+            <div class="column has-text-centered">
+              <p class="moinMoin Moin title"> 
+                <span class="Moin">
+                  Moin, I'm Celine!
+                </span>
+                </div> 
+             
+               
+          <p class="subtitle has-text-centered">Welcome to my log of travels & the animals I've encountered! </p>
           
         </div>
         <!-- Auto sized column2 -->
-        <div class="column level-right">
+         <div class="column level-item">
           <figure class="image is-128x128">
             <img class="is-rounded has-" src="/Images/dogOnShoe.png" />
           </div>
 
           <div class="column level-right">
           <figure class="image is-128x128">
-            <img class="is-rounded has-" src="/Images/dog.png" />
+            <img class="is-rounded has-" src="/Images/llama.png" />
           </div>
+
 
           <div class="column level-right">
             <figure class="image is-128x128">
-              <img class="is-rounded has-" src="/Images/donkeyIr.png" />
+              <img class="is-rounded has-" src="/Images/mexDog.png" />
             </div>
+
+<!-- animation test
+<div class="moinMoin">Moin Moin</div> -->
 
             <div class="column level-right">
               <figure class="image is-128x128">
                 <img class="is-rounded has-" src="/Images/bunnyKor.png" />
+                
               </div>
           </figure>
+          
         </div>
+         <!-- 3rd column -->
+         <!-- <div class="columns is-mobile">
+          <div class="column is-half is-offset-one-quarter">
+            is-half is-offset-one-quarter
+          </div>
+        </div>
+        
+        <div class="columns is-mobile">
+          <div class="column is-three-fifths is-offset-one-fifth">
+            is-three-fifths is-offset-one-fifth
+          </div>
+        </div>
+        
+        <div class="columns is-mobile">
+          <div class="column is-4 is-offset-8">
+            is-4 is-offset-8
+          </div>
+        </div>
+        
+        <div class="columns is-mobile">
+          <div class="column is-11 is-offset-1">
+            is-11 is-offset-1
+          </div>
+        </div> -->
+      
+    </div>
       </div>
     </div>
-
     </section>
-
-    <br />
-    <div id="middleContainer"></div>
-    <br />
-    <hr />
+<hr>
     <footer>
-      created by Celine Chan copyright follow me: GitHub, LinkIn, Insta,
-      Twitter, Google, FB icons only but each icon will be a link.
-      <p class="buttons">
-        <button class="button is-dark">
-          <span class="icon">
-            <i class="fab fa-github"></i>
-          </span>
-          <span> <a href="https://github.com/SICelineChan"></a> GitHub</span>
-        </button>
-        <button class="button is-info">
-          <span class="icon">
-            <i class="fab fa-twitter"></i>
-          </span>
-          <span> <a href="https://twitter.com/Tinlone">@Tinlone</span></a> 
-        </button>
-    </footer>
+        <div class="notification is-dark is-0-fullhd">
+          <footer>
+            created and copyright by Celine Chan 
+             follow me at:
+            <p class="buttons">
+              <button class="button is-dark is-small">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span> <a href="https://github.com/SICelineChan"></a> GitHub</span>
+              </button>
+              <button class="button is-info is-small">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+                <span> <a href="https://twitter.com/Tinlone">@Tinlone</span></a> 
+              </button>
+          </footer>
+        </div>
+      
 
     <script src="/javascript/proj1main.js"></script>
     <!-- <script src="/javascript/fetchMeLisbon.js"></script>

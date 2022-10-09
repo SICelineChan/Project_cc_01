@@ -14,18 +14,29 @@
   <link rel="icon" href="/Images/palmfavicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Norican&family=Patua+One&family=Shrikhand&display=swap" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
   />
+  <link rel="stylesheet" href="/CSS/darkmodeTest.css">
   <body>
     <nav class="navbar">
       <div class="container">
-        <div id="navMenu" class="navbar-menu">
+        <!-- <div class="navbar-brand">
+        <a href="/webpages/index.html" class="navbar-item">
+          <i class="fa-solid fa-shrimp fa-xl"></i>
+        </a> -->
+        <span class="navbar-burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        
+      </div>
+        <div id="navMenuHeroA" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item" href="/webpages/index.html"> 
               <span class="icon-text">
@@ -55,111 +66,153 @@
         <p class="title">
           Dear Diary
         </p>
-        <p class="subtitel">A place for memories!</p>
+        <p class="subtitle">A place for memories!</p>
+        <button
+        id="darkModeButton"
+        class="button is-small is-hovered is-rounded"
+      >
+        Dark Mode On
+      </button>
+
+      <button
+              id="textButton"
+              class="button is-small is-rounded is-right is-light"
+            >
+              <span class="icon">
+                <i class="fas fa-heading fa-lg"></i>
+              </span>
+            </button>
       </div>
+      
     </section>
     <!-- separation -->
     <br>
     <!-- more separation -->
     <div class="container is-fluid">
+
       <div class="tile is-ancestor">
         <div class="tile is-vertical is-8">
           <div class="tile">
             <div class="tile is-parent is-vertical">
-              <div class="tile is-child notification is-light">
-                <p class="subtitle">Travel Logs!</p>
+              <article class="tile is-child notification is-primary">
+                <p class="meName">Travel Logs!</p>
                 <p>
                   A bit of about me kind of page. When I started travelling, where I like
                   the most, where I hate the most!
                 </p>
-              </div>
-              <div class="tile is-child notification is-warning">
-                <div id="placeName">First try of sorting some travel info on JS!</div>
-    <input id="continentAdd" type="text" value="" placeholder="continent" />
-    <input id="countryAdd" type="text" value="" placeholder="country" />
-    <input id="cityAdd" type="text" value="" placeholder="city" />
-    <input
-      id="dateOftravelAdd"
-      type="date"
-      value="2022-01-10"
-      min="2000-01-01"
-      max="2050-12-31"
-      placeholder="dateOftravel"
-    />
-    <button id="buttonAdd" class="button is-danger is-light is-small">
-      Add!
-    </button>
-    </div>
-              
+              </article>
+              <article class="tile is-child notification is-warning">
+                
+                  <div id="placeName">First try of sorting some travel info on JS!</div>
+      <input id="continentAdd" type="text" value="" placeholder="continent" />
+      <input id="countryAdd" type="text" value="" placeholder="country" />
+      <input id="cityAdd" type="text" value="" placeholder="city" />
+      <input
+        id="dateOftravelAdd"
+        type="date"
+        value="2022-01-10"
+        min="2000-01-01"
+        max="2050-12-31"
+        placeholder="dateOftravel"
+      />
+      <button id="buttonAdd" class="button is-danger is-light is-small">
+        Add!
+      </button>
+              </article>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification is-light">
-                
-                <p class="subtitle">Ireland</p>
-                <figure class="image is-4by3">
-                  <img src="/Images/Ire30Aug16_mod.jpg">
+              <article class="tile is-child notification is-info has-text-centered">
+                <p class="meName">Osaka Castle</p>
+                <figure class="image is-5by4">
+                  <img src="/Images/osakaCastle.jpg">
                 </figure>
+                <p>Osaka Castle in Japan. I didn't go inside, because all the tour groups were like flies! But the courtyard and the river have much better views!</p>
               </article>
             </div>
           </div>
-          <!-- <div class="tile is-parent">
+          <div class="tile is-parent">
             <article class="tile is-child notification is-danger">
-              <p class="title">Weather forecast!</p>
-              <p class="subtitle">Aligned with the right tile</p>
+              <p class="meName">Photo Carousel</p>
               <div class="content">
-                
+               <div id="randomPicture" class="card-image"></div>
+                <button id="forwardButton" class="button is-rounded level-right is-warning">
+                  turn forward
+                </button>
+                <button id="backButton" class="button is-rounded is-fixed-bottom is-warning">
+                  back
+                </button>
               </div>
             </article>
-          </div> -->
+          </div>
         </div>
         <div class="tile is-parent">
-          <article class="tile is-child notification is-warning has-text-centered">
+          <article class="tile is-child notification is-success has-text-centered">
             <div class="content">
-              
-              <p class="subtitle">Weather</p>
-              <div class="#">
-                <h2>Current City</h2>
-    <p><div id="currentCity"></div></p>
-    <img id="wetterIcon" src="">
-    <br>
-    <h2>Feature City</h2>
-    <p><div id="forecastForCity"></div></p>
-    <div id="featureForCity"></div>
-    <img id="weatherIcon" src="">
+              <p class="meName">Weather Forecast</p>
+              <div class="content">
+                <div class="content">
+                  <h2>Current City</h2>
+                  <p><div id="currentCity"></div></p>
+                  <img id="wetterIcon" src="">
+                  <p class="subtitle">Hamburg</p>
+                  <figure class="image is-">
+                    <img src="/Images/hhXmas.jpg">
+                  </figure>
+                  <br>
+                  <h2>Feature City</h2>
+                  <p><div id="forecastForCity"></div></p>
+                  <div id="featureForCity"></div>
+                  <img id="weatherIcon" src="">
+                  
+              </div>
               </div>
             </div>
           </article>
         </div>
       </div>
-  
+      <!--  -->
+      
+      <!--Another sets of tiles  -->
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child box">
+            <p class="meName">Blah </p>
+            <p class="subtitle">much sleep!</p>
+            <div class="content">
+              <figure class="image is-128x128">
+                <img class="is-rounded has-" src="/Images/DutchDog.png" />
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent is-6">
+          <article class="tile is-child box is-danger">
+            <p class="meName">Add extra Blah Blah</p>
+            <p class="subtitle">some more blah</p>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child box">
+            <p class="meName">ZZzzzz</p>
+            <p class="subtitle">sleepy now, bye!</p>
+            <div class="content">
+              <figure class="image is-128x128">
+                <img class="is-rounded has-" src="/Images/GreeceDog.png" />
+            </div>
+          </article>
+        </div>
     
+     
+    <!-- ancestor ends here -->
     <hr />
     
     
-    <p>Test Current weather and the icon</p>
-    <h2>Places</h2>
-    <p>Place to play around with event.target, removing places/countries...</p>
-    <div id="placeName">First try of sorting some travel info on JS!</div>
-    <input id="continentAdd" type="text" value="" placeholder="continent" />
-    <input id="countryAdd" type="text" value="" placeholder="country" />
-    <input id="cityAdd" type="text" value="" placeholder="city" />
-    <input
-      id="dateOftravelAdd"
-      type="date"
-      value="2022-01-10"
-      min="2000-01-01"
-      max="2050-12-31"
-      placeholder="dateOftravel"
-    />
-    <!-- <button id="buttonPush">Push</button> -->
-    <button id="buttonAdd" class="button is-danger is-light is-small">
-      Add!
-    </button>
-  </div>
 
     <script src="/javascript/proj1main.js"></script>
-
-    <!-- <script src="/javascript/fetchMeLisbon.js"></script> -->
+<script src="/javascript/darkMode.js"></script>
+    <script src="/javascript/fotoCarousel.js"></script>
     <script src="/javascript/featureCity.js"></script>
   </body>
 </html>

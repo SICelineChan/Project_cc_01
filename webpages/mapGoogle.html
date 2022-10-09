@@ -14,10 +14,9 @@
 <link rel="icon" href="/Images/palmfavicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Shrikhand&display=swap"
-  rel="stylesheet"
-/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Mada&family=Nanum+Pen+Script&family=Norican&family=Patua+One&family=Shrikhand&display=swap" rel="stylesheet">
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
@@ -25,13 +24,19 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
         <link rel="stylesheet" type="text/css" href="/CSS/styleMe.css" />
+        <link rel="stylesheet" href="/CSS/darkmodeTest.css">
         <script type="module" src="./index.js"></script>
       
     
       <body> 
         <nav class="navbar">
         <div class="container">
-          <div id="navMenu" class="navbar-menu">
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <div id="navMenuHeroA" class="navbar-menu is-0-fullhd">
             <div class="navbar-start">
               <a class="navbar-item" href="/webpages/index.html"><span class="icon-text">
                 <span class="icon">
@@ -40,7 +45,6 @@
                 <span>Home</span>
               </span>
                </a>
-              
             </div>
   
             <div class="navbar-end">
@@ -48,7 +52,7 @@
                 <a class="navbar-item" href="/webpages/dearDiary.html"> Dear Diary </a>
               <a class="navbar-item" href="/webpages/localStorage.html"> Facts & Places </a>
               <a class="navbar-item" href="/webpages/mapGoogle.html"> Fun Map </a>
-                <div class="buttons">
+              <div class="buttons">
                   <a class="button is-dark" href="https://github.com/SICelineChan">Github</a>
                 </div>
               </div>
@@ -56,40 +60,89 @@
           </div>
         </div>
       </nav>
+
       <section class="hero is-medium is-warning has-text-centered-desktop">
         <div class="hero-body">
           <p class="title">
             Fun Map
           </p>
-          <p class="subtitel">Check out the map!</p>
+          <p class="subtitle">Check out the map and a little description of the trip!!</p>
+          <button
+        id="darkModeButton"
+        class="button is-small is-hovered is-rounded"
+      >
+        Dark Mode On
+      </button>
         </div>
       </section>
       <br>
-
+<!-- Middle section -->
       <div class="container is-fluid">
-        <div class="columns">
-          <div class="column is-half"> 
-            <div id="forecastForCity"></div>
-            <div id="weather" >Testing JS with OpenWeather API</div>
+
+        <div class="columns" >
+          <div class="column is-half "> 
+            <div id="forecastForCity" class="box"></div>
+            <div id="weather" class="box">Check out the weather forecast!</div>
+    
           </div>
 
-          <div class="column has-text-centered">
-            <p>Here is scaled down map from Google of Funchal!</p>
+          <div class="column  has-text-centered ">
+            <p class=" notification is-warning is-light">Here is scaled down map from Google of Funchal! 
 
-            <p>You can scroll and check out other places on Madeira Island!</p>
-            <div id="map"></div>
+            You can scroll and check out other places on Madeira Island! 👆</p>
+            <div class="box">
+            <div id="map"></div></div>
           </div>
           
         </div>
-        
-      
 
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child">
+              <article class="tile is-child notification is-primary">
+                
+                <p class="subtitle">Funchal, Madeira</p>
+                <p>We stayed somewhere quite close to the city centre and it was nice to walk along the sea. But the best is travelling outside of the main city and explore the rest of Medaira Island!</p>
+              </article>
+            </div>
+            <!-- textArea free TEXT -->
+            <div class="tile is-child box">
+              <p class="subtitle">Write something<button id="addTextButton" class="button is-small is-rounded is is-danger is is-light is-pulled-right">add</button></p>
+              <textarea id="textBox" class="textarea is-danger" placeholder="Dangerous textarea"></textarea>
+            </div>
+          </div>
+
+          <!-- Write something should appear here! -->
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <article class="tile is-child notification is-info is-light">
+                
+                <p class="subtitle">PR11 Walking Route </p>
+                <p>(VEREDA DOS BALCÕES)</p>
+                
+              <div id="travelBlah" class="has-text-justified">Description of Route</div>
+            </article>
+            </div>
+          </div>
+        
+          <article class="tile is-child notification is-info">
+            <p class="subtitle has-text">Levadas de Madeira</p>
+            <figure class="image is-1by1">
+              <img src="/Images/pr11madeiraWalk.jpg">
+            </figure>
+          </article>
+        </div>
+      
+      
+      </div>
         <script
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc8lLUI39Rw8xGjcH4AMua2x3-SVWMBig&callback=initMap&v=weekly"
           defer
         ></script>
         <script src="/javascript/mapTest.js"></script>
         <script src="/javascript/weatherTEST.js"></script>
+        <script src="/javascript/darkMode.js"></script>
+        <script src="/javascript/fetchMeTEXTLisbon.js"></script>
       </body>
     </html>
   </body>

@@ -3,53 +3,68 @@ let baseInfo = [
   //   continent: "Asia",
   //   country: "South Korea",
   //   city: "Seoul",
-  //   dateOftravel: "12 August 2015",
+  //   datetravelfrom: "12 August 2015",
+  //   // to: "14 October 2015",
   // },
   // {
   //   continent: "Asia",
   //   country: "Vietnam",
   //   city: "Hanoi",
-  //   dateOftravel: "8 September 2014",
+  //   datetravelfrom: "5 September 2014",
+  //   // to: "20 September 2014",
   // },
   // {
   //   continent: "Europe",
   //   country: "Norway",
   //   city: "Bergen",
-  //   dateOftravel: "15 April 2015",
+  //   datetravelfrom: "15 April 2015",
+  //   // to: "21 April 2015",
   // },
   // {
   //   continent: "Europe",
   //   country: "Portugal",
   //   city: "Funchal",
-  //   dateOftravel: "6 October 2019",
+  //   datetravelfrom: "6 October 2019",
+  //   // to: "14 October 2019",
   // },
   // {
   //   continent: "North America",
   //   country: "Mexico",
   //   city: "Mexico City",
-  //   dateOftravel: "28 Feburary 2017",
+  //   datetravelfrom: "28 Feburary 2017",
+  //   // to: "10th March 2017",
   // },
 ];
 const placeName = document.querySelector("#placeName");
 const continentAdd = document.querySelector("#continentAdd");
 const countryAdd = document.querySelector("#countryAdd");
 const cityAdd = document.querySelector("#cityAdd");
-const dateOftravelAdd = document.querySelector('input[type="date"]');
+const datetravelfromAdd = document.querySelector('input[type="date"]');
+
+// const dateOftravelToAdd = document.querySelector(
+//   '#dateOftravelToAddinput[type="date"]'
+// );
 const buttonAdd = document.querySelector("#buttonAdd");
 // const buttonPush = document.querySelector("#buttonPush");
 
 fetch("/javascript/baseInfo.json").then(function (response) {
   response.json().then(function (mybaseInfo) {
     console.log(mybaseInfo);
+    console.log(mybaseInfo[1].datetravelfrom);
     fillPlaces(mybaseInfo);
   });
+  // .catch(function (error) {
+  //   alert("Was there something wrong?");
+  // });
 });
 
 function fillPlaces() {
   let places = "";
   for (let i = 0; i < baseInfo.length; i++) {
-    const { continent, country, city, dateOftravel } = baseInfo[i];
-    places += `<p> ${continent}, ${country}, ${city}, ${dateOftravel} <button data-pos="${i}">🚮</button></p>`;
+    const { continent, country, city, dateOftravel, datetravelfrom } =
+      baseInfo[i];
+    console.log(baseInfo[i]);
+    places += `<p> ${continent}, ${country}, ${city}, ${dateOftravel} ${datetravelfrom} <button data-pos="${i}">🚮</button></p>`;
   }
   placeName.innerHTML = places;
 }
@@ -72,7 +87,9 @@ buttonAdd.addEventListener("click", function () {
     continent: continentAdd.value,
     country: countryAdd.value,
     city: cityAdd.value,
-    dateOftravel: dateOftravelAdd.value,
+    datetravelfrom: datetravelfromAdd.value,
+
+    // to: dateOftravelToAdd.value,
   };
   baseInfo.push(newTravelInfo);
   fillPlaces();

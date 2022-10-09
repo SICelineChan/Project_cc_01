@@ -1,0 +1,19 @@
+.moinMoin {
+  animation: moinMoin 1s 2s 3 normal;
+  transition: all 4s ease-in-out;
+  z-index: 1;
+}
+@keyframes moinMoin {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
