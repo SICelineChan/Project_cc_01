@@ -33,19 +33,52 @@
         >
           Dark Mode On
         </button>
+        <button
+              id="textButton"
+              class="button is-small is-rounded is-right is-info is-0-fullhd"
+            >
+              <span class="icon">
+                <i class="fas fa-heading fa-lg"></i>
+              </span>
+            </button>
+      </div>
       </div>
     </div>
-    <div class="container">
-      <div class="notification is-medium">
-        <img
-          id="eightBall"
-          class="is-center"
-          src="/Images/cat.png"
-          alt="Eight Ball Cat says"
-        />
+
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <p class="title">Magic Eight Ball</p>
+          <p class="subtitle">That's this cat's name and will be your oracle guide today!</p>
+          <div class="content">
+            <img
+              id="eightBall"
+              class="is-center"
+              src="/Images/cat.png"
+              alt="Eight Ball Cat says"
+            />
+          </div>
+        </article>
+      </div>
+      <div class="tile is-parent is-half">
+        <article class="tile is-child box">
+          <p class="title">The Oracle says...</p>
+
+          <div class="content">
+            <div id="oracle" class="box is-danger"></div>
+            <!-- <div><p class="speech-bubble">Ask me Something</p></div> -->
+          </div>
+        </article>
       </div>
     </div>
-    <div><p class="speech-bubble">Ask me Something</p></div>
+    <!-- <script>
+
+      localStorage.setItem("darkmode", "on")
+      alert(localStorage.getItem("darkmode"))
+
+
+
+    </script> -->
 
     <script src="/javascript/darkMode.js"></script>
     <script src="/javascript/randomPractice.js"></script>

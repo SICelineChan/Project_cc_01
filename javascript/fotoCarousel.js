@@ -2,8 +2,8 @@ const randomPicture = document.querySelector("#randomPicture");
 const forwardButton = document.querySelector("#forwardButton");
 const backButton = document.querySelector("#backButton");
 
-let dog = "url(/Images/dog.png)";
-let bunny = "url(/Images/bunnyKor.png)";
+let dog = "url(/Images/Ismal.jpg)";
+let bunny = "url(/Images/Norway18Arp15.jpg)";
 let indo = "url(/Images/indoNovember17.jpg)";
 let souKorea = "url(/Images/southKorea.jpg)";
 
@@ -16,13 +16,11 @@ forwardButton.addEventListener("click", function () {
   if (counter >= fotos.length) {
     counter = 0;
   }
-
-  randomPicture.innerHTML = counter;
+  // randomPicture.innerHTML = counter;
   randomPicture.style.backgroundImage = fotos[counter];
 
   console.log("here is the counter " + counter);
 });
-
 backButton.addEventListener("click", function () {
   counter--;
 
@@ -30,6 +28,6 @@ backButton.addEventListener("click", function () {
     counter = fotos.length - 1;
   }
 
-  randomPicture.innerHTML = counter;
+  // randomPicture.innerHTML = counter;
   randomPicture.style.backgroundImage = fotos[counter];
 });

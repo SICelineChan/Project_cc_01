@@ -8,9 +8,13 @@ darkModeButton.addEventListener("click", function () {
   if (darkCheck) {
     body.className = "";
     darkModeButton.innerHTML = `Dark Mode on.`;
+    // localStorage.setItem("darkMode", "disabled");
+    // alert("dark mode on");
   } else {
     body.className = "dark";
     darkModeButton.innerHTML = `Dark Mode Off!`;
+    // localStorage.setItem("darkMode", "enabled");
+    // alert("dark mode off");
   }
 });
 
@@ -28,3 +32,4 @@ textButton.addEventListener("click", function () {
     textButton.innerHTML = `Font smaller`;
   }
 });
+console.log(darkModeButton);
