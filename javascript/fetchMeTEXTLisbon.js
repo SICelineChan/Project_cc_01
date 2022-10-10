@@ -15,15 +15,15 @@
 // });
 
 let someBlah = [
-  { detail: "Arrived and napped at the Airbnb until dinner time!" },
-  {
-    detail:
-      "Warm for October and was planning bus trip to a walk. Did a little loop around Funchal",
-  },
-  {
-    detail:
-      "The weather was fantastic for walking! Took buses towards Levada dos Balcões, starting at Ribeiro Frio",
-  },
+  // { detail: "Arrived and napped at the Airbnb until dinner time!" },
+  // {
+  //   detail:
+  //     "Warm for October and was planning bus trip to a walk. Did a little loop around Funchal",
+  // },
+  // {
+  //   detail:
+  //     "The weather was fantastic for walking! Took buses towards Levada dos Balcões, starting at Ribeiro Frio",
+  // },
 ];
 
 const travelBlah = document.querySelector("#travelBlah");
@@ -62,11 +62,25 @@ function save() {
   const travelDetail = JSON.stringify(someBlah);
   localStorage.setItem("someBlah", travelDetail);
 }
-// save();
 
 function load() {
   const travelDetail = localStorage.getItem("someBlah");
   someBlah = JSON.parse(travelDetail);
 }
+
+travelBlah.addEventListener("click", function (event) {
+  // alert("blah!");
+  if (event.target.tagName !== "BUTTON") {
+    return;
+  }
+  const removeButton = event.target;
+
+  const removeDetail = removeButton.dataset.pos;
+
+  someBlah.splice(removeDetail, 1);
+  fillText();
+  save();
+});
+
 load();
 fillText();

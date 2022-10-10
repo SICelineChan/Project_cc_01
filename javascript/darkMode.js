@@ -8,13 +8,14 @@ darkModeButton.addEventListener("click", function () {
   if (darkCheck) {
     body.className = "";
     darkModeButton.innerHTML = `Dark Mode on.`;
-    // localStorage.setItem("darkMode", "disabled");
-    // alert("dark mode on");
+    localStorage.setItem("darkMode", "disabled");
+
+    // alert("dark mode to turn on");
   } else {
     body.className = "dark";
     darkModeButton.innerHTML = `Dark Mode Off!`;
-    // localStorage.setItem("darkMode", "enabled");
-    // alert("dark mode off");
+    localStorage.setItem("darkMode", "enabled");
+    // alert("dark mode to turn off");
   }
 });
 

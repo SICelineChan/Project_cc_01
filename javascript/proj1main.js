@@ -81,7 +81,7 @@ buttonAdd.addEventListener("click", function () {
 
 placeName.addEventListener("click", function (event) {
   // alert("show me click");
-  // console.log(event.target.tagName);
+
   if (event.target.tagName !== "BUTTON") {
     return;
   }

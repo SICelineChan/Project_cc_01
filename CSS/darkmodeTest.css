@@ -34,3 +34,11 @@ body.dark button {
 body.large {
   font-size: 25px;
 }
+body.large .title {
+  font-size: 45px;
+}
+
+body.large .meName,
+body.large .subtitle {
+  font-size: 30px;
+}
