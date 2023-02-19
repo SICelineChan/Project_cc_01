@@ -23,6 +23,68 @@
     />
   </head>
   <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <img src="/Images/cat.png" width="30" height="30">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/webpages/index.html">
+            Home
+          </a>
+    
+          <a class="navbar-item" href="/webpages/dearDiary.html" >
+            dear diary
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <div class="notification is-medium has-text-centered-desktop">
         <h2 class="title">Test darkmode</h2>
@@ -36,10 +98,7 @@
         <button
               id="textButton"
               class="button is-small is-rounded is-right is-info is-0-fullhd"
-            >
-              <span class="icon">
-                <i class="fas fa-heading fa-lg"></i>
-              </span>
+            >Font Size
             </button>
       </div>
       </div>
@@ -49,6 +108,7 @@
       <div class="tile is-parent">
         <article class="tile is-child notification is-danger">
           <p class="title">Magic Eight Ball</p>
+          <p class="subtitle">This is a testing page for using JS with conditional methods</p>
           <p class="subtitle">That's this cat's name and will be your oracle guide today!</p>
           <div class="content">
             <img

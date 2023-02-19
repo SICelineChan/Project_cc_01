@@ -1,11 +1,7 @@
-/* font-family: 'Jua', sans-serif;
-font-family: 'Mada', sans-serif;
-font-family: 'Nanum Pen Script', cursive;
-font-family: 'Norican', cursive;
-font-family: 'Patua One', cursive;
-font-family: 'Shrikhand', cursive; */
 .Moin {
   font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-direction: column;
   font-size: 40px;
 }
 .meName {

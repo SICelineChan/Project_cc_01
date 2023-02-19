@@ -33,7 +33,10 @@ const addTextButton = document.querySelector("#addTextButton");
 fetch("/javascript/travelDetail.json").then(function (response) {
   response.json().then(function (result) {
     console.log(result);
-    fillText(result);
+    if (someBlah == 0) {
+      someBlah = result;
+    }
+    fillText();
   });
 });
 
@@ -65,7 +68,7 @@ function save() {
 
 function load() {
   const travelDetail = localStorage.getItem("someBlah");
-  someBlah = JSON.parse(travelDetail);
+  someBlah = JSON.parse(travelDetail) || [];
 }
 
 travelBlah.addEventListener("click", function (event) {
